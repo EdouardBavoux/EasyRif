@@ -158,7 +158,17 @@ public class MainActivity extends Activity implements dialogueNameTab.onNameIsCo
                 Log.d("Zoomeb","sizeCol value is: "+ sizeCol);
                 switch(sizeCol){
                     case 0 :{
-                        Log.d("Zoomeb","Nothing has been written yet ");
+                        Log.d("Zoomeb","Deletion character by character ");
+                        if (dl[0].length()<4) {
+                            Log.d("Zoomeb","Nothing to be erased");
+                        }
+                        else {
+                            Log.d("Zoomeb","Deletion of one column");
+                            for (int i=0;i<dl.length;i++)
+                            {
+                                dl[i].setText(dl[i].getText().toString().substring(0,dl[i].length()-1));
+                            }
+                        }
                     }
                     break;
                     case 1 :{
@@ -167,7 +177,7 @@ public class MainActivity extends Activity implements dialogueNameTab.onNameIsCo
                         {
                             dl[i].setText(dl[i].getText().toString().substring(0,dl[i].length()-sizeCol-1));
                         }
-                        sizeCol=9;
+                        sizeCol=0;
                     }
                     break;
                     case 2 :{
@@ -176,11 +186,7 @@ public class MainActivity extends Activity implements dialogueNameTab.onNameIsCo
                         {
                             dl[i].setText(dl[i].getText().toString().substring(0,dl[i].length()-sizeCol-1));
                         }
-                        sizeCol=9;
-                    }
-                    break;
-                    case 9: {
-                        Log.d("Zoomeb","Last values were already deleted. Impossible to delete further");
+                        sizeCol=0;
                     }
                     break;
                     default: {
@@ -198,10 +204,31 @@ public class MainActivity extends Activity implements dialogueNameTab.onNameIsCo
             public void onClick(View view) {
                 //Actions to perform when clicking on Print tab
                 //First , Edition of the complete tab in a multi-line string:
-                exportedTab=null;
-                exportedTab=dl[5].getText().toString();
+                exportedTab="```"+"Check out this riff :";
                 String Newligne=System.getProperty("line.separator");
-                exportedTab="```"+"Check out this riff :"+Newligne+exportedTab+Newligne+dl[4].getText().toString()+Newligne+dl[3].getText().toString()+Newligne+dl[2].getText().toString()+Newligne+dl[1].getText().toString()+Newligne+dl[0].getText().toString()+"```";
+                int tableftlength=dl[0].length();
+                int linewidth=20;
+                int i=0;
+                while(tableftlength>(linewidth*(i+1)))
+                {
+                    //There is 6 lines to write before going to a new line
+                    exportedTab=exportedTab+Newligne+Newligne+dl[5].getText().toString().substring(i*linewidth,(i+1)*linewidth)+Newligne+
+                                                            dl[4].getText().toString().substring(i*linewidth,(i+1)*linewidth)+Newligne+
+                                                            dl[3].getText().toString().substring(i*linewidth,(i+1)*linewidth)+Newligne+
+                                                            dl[2].getText().toString().substring(i*linewidth,(i+1)*linewidth)+Newligne+
+                                                            dl[1].getText().toString().substring(i*linewidth,(i+1)*linewidth)+Newligne+
+                                                            dl[0].getText().toString().substring(i*linewidth,(i+1)*linewidth);
+                    i++;
+                }
+                //Now, the are just 6 lines left
+                exportedTab=exportedTab+Newligne+Newligne+dl[5].getText().toString().substring(i*linewidth,tableftlength-1)+Newligne+
+                        dl[4].getText().toString().substring(i*linewidth,tableftlength-1)+Newligne+
+                        dl[3].getText().toString().substring(i*linewidth,tableftlength-1)+Newligne+
+                        dl[2].getText().toString().substring(i*linewidth,tableftlength-1)+Newligne+
+                        dl[1].getText().toString().substring(i*linewidth,tableftlength-1)+Newligne+
+                        dl[0].getText().toString().substring(i*linewidth,tableftlength-1)+"```";
+
+                //exportedTab="```"+"Check out this riff :"+Newligne+exportedTab+Newligne+dl[4].getText().toString()+Newligne+dl[3].getText().toString()+Newligne+dl[2].getText().toString()+Newligne+dl[1].getText().toString()+Newligne+dl[0].getText().toString()+"```";
                 Log.d("Zoomeb","The exportedTab should look like: "+Newligne+ exportedTab);
 
 
