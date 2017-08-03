@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*Copyright 2017 Edouard Bavoux
+
+This file is part of EasyRif.
+
+    EasyRif is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EasyRif is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EasyRif.  If not, see <http://www.gnu.org/licenses/>.*/-->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/superLightBlue"
+    tools:context="com.eb.zoom.easyrif.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share your riffs !"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/PickerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title"
+            android:layout_margin="8dp">
+
+        <NumberPicker
+            android:scaleX="0.80"
+            android:layout_marginRight="-10dp"
+            android:id="@+id/Picker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </NumberPicker>
+
+        <NumberPicker
+            android:scaleX="0.80"
+            android:layout_marginRight="-10dp"
+            android:id="@+id/Picker2"
+            android:layout_toRightOf="@id/Picker1"
+            android:layout_alignTop="@id/Picker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>
+
+        <NumberPicker
+            android:scaleX="0.80"
+            android:layout_marginRight="-10dp"
+            android:id="@+id/Picker3"
+            android:layout_toRightOf="@id/Picker2"
+            android:layout_alignTop="@id/Picker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>
+
+        <NumberPicker
+            android:scaleX="0.80"
+            android:layout_marginRight="-10dp"
+            android:id="@+id/Picker4"
+            android:layout_toRightOf="@id/Picker3"
+            android:layout_alignTop="@id/Picker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>
+
+        <NumberPicker
+            android:scaleX="0.80"
+            android:layout_marginRight="-10dp"
+            android:id="@+id/Picker5"
+            android:layout_toRightOf="@id/Picker4"
+            android:layout_alignTop="@id/Picker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>
+
+        <NumberPicker
+            android:scaleX="0.80"
+            android:layout_marginRight="-10dp"
+            android:id="@+id/Picker6"
+            android:layout_toRightOf="@id/Picker5"
+            android:layout_alignTop="@id/Picker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ContainButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:background="@color/greyBlue"
+            android:layout_below="@id/PickerLayout">
+
+            <ImageButton
+                android:id="@+id/writeLine"
+                style="@style/MyButtons"
+                android:src ="@android:drawable/ic_input_add"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                style="@style/MyButtons"
+                android:id="@+id/undoLine"
+                android:src="@android:drawable/ic_input_delete"
+                android:text="Undo "
+                android:layout_toRightOf="@id/writeLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <Button
+            style="@style/MyButtons"
+            android:id="@+id/resetWheels"
+            android:text="Reset the wheels"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/TabContainer"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="5dp"
+            android:padding="5dp"
+            android:background="@color/lightGreyBlue"
+            android:weightSum="2"
+            android:layout_below="@+id/ContainButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView android:layout_width="fill_parent"
+                android:id="@+id/ScrollTab"
+                android:layout_height="fill_parent">
+                <LinearLayout android:layout_width="50dp"
+                    android:orientation="vertical"
+                    android:paddingRight="100dp"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true">
+                    <TextView
+                        android:id="@+id/dispLine6"
+                        android:maxLines="1"
+                        android:text="e |"
+                        android:fontFamily="monospace"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/dispLine5"
+                        android:text="B |"
+                        android:maxLines="1"
+                        android:fontFamily="monospace"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/dispLine4"
+                        android:text="G |"
+                        android:maxLines="1"
+                        android:fontFamily="monospace"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/dispLine3"
+                        android:text="D |"
+                        android:maxLines="1"
+                        android:fontFamily="monospace"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/dispLine2"
+                        android:text="A |"
+                        android:maxLines="1"
+                        android:fontFamily="monospace"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/dispLine1"
+                        android:text="E |"
+                        android:maxLines="1"
+                        android:fontFamily="monospace"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/MyButtons"
+            android:id="@+id/printTab"
+            android:drawableRight="@android:drawable/ic_menu_share"
+            android:text="Share Tab "
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/MyButtons"
+            android:id="@+id/SaveTab"
+            android:drawableRight="@android:drawable/ic_menu_save"
+            android:text="Save Tab "
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/printTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

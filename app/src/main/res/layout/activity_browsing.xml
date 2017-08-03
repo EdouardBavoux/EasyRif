@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*Copyright 2017 Edouard Bavoux
+
+This file is part of EasyRif.
+
+    EasyRif is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EasyRif is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EasyRif.  If not, see <http://www.gnu.org/licenses/>.*/-->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/superLightBlue"
+    tools:context="com.eb.zoom.easyrif.BrowsingActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="503dp"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    <RelativeLayout
+        android:id="@+id/OpenTabCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_margin="30dp"
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_easyrif3" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open recent tab:"
+            android:layout_below="@+id/logo"/>
+
+        <ListView
+            android:id="@+id/tablist"
+            android:layout_margin="8dp"
+            android:background="@color/greyBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/NewTabCont"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        tools:layout_constraintLeft_creator="1">
+
+
+
+        <Button
+
+            style="@style/MyButtons"
+            android:padding="4dp"
+            android:id="@+id/bNewTab"
+            android:text="New Tab"
+            android:drawableRight="@android:drawable/ic_input_add"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*Copyright 2017 Edouard Bavoux
+
+This file is part of EasyRif.
+
+    EasyRif is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EasyRif is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EasyRif.  If not, see <http://www.gnu.org/licenses/>.*/-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@color/lightGreyBlue">
+
+
+    <TextView
+        android:id="@+id/namehint"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Enter the name, to save the tab" />
+
+
+    <EditText
+        android:id="@+id/nameTab"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/namehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name of the tab" />
+
+    <Button
+        style="@style/MyButtons"
+        android:id="@+id/validName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/nameTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="OK" />
+
+</RelativeLayout>
