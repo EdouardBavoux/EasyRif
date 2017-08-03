@@ -315,6 +315,16 @@ public class MainActivity extends Activity implements dialogueNameTab.onNameIsCo
 
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        Log.d("Zoomeb", "button back has been pressed");
+        Intent i2 = new Intent(getApplicationContext(),BrowsingActivity.class);
+        startActivity(i2);
+        //super.onBackPressed();
+
+    }
+
     //implement public void onNameIsCommitted(String name);
     @Override
     public void onNameIsCommitted(String name){

@@ -88,7 +88,7 @@ public class BrowsingActivity extends Activity {
                         //We are back here is the deletion has been confimed by the user
                         boolean deleted = deleteFile(adapterView.getItemAtPosition(i).toString());
                         refreshTabList();
-                        Log.d("BrowsingTabs","Deletion has been confirmed and executed for : "+adapterView.getItemAtPosition(i).toString()+deleted);
+                        Log.d("BrowsingTabs","Deletion has been confirmed and executed");
                     }
                 };
 
