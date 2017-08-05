@@ -105,4 +105,13 @@ public class BrowsingActivity extends Activity {
         tabAdapter.addAll(myTabs);
         tabAdapter.notifyDataSetChanged();
     }
+
+ /*   @Override
+    public void onBackPressed()
+    {
+        Log.d("BrowsingTabs", "button back has been pressed");
+        super.onBackPressed();
+    }*/
+
+
 }

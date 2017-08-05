@@ -65,7 +65,10 @@ This file is part of EasyRif.
             android:background="@color/greyBlue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView" />
+            android:layout_below="@+id/textView"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarFadeDuration="20000"
+            android:scrollbarStyle="insideInset"/>
 
     </RelativeLayout>
 

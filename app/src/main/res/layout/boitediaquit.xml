@@ -26,43 +26,42 @@ This file is part of EasyRif.
 
 
     <TextView
-        android:id="@+id/namehint"
+        android:id="@+id/namehintQuit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        android:text="Delete this tab ?" />
+        android:text="Exit ? \n Unsaved tab will be lost." />
 
     <RelativeLayout
         style="@style/MySections"
-        android:layout_below="@id/namehint"
+        android:layout_below="@id/namehintQuit"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     <Button
-        android:id="@+id/cancelDel"
+        android:id="@+id/cancelQuit"
         style="@style/MyButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/namehint"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        android:text="Cancel" />
+        android:text="Stay" />
 
     <Button
-        android:id="@+id/validDel"
+        android:id="@+id/validQuit"
         style="@style/MyButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/cancelDel"
-        android:layout_toRightOf="@id/cancelDel"
+        android:layout_alignBaseline="@+id/cancelQuit"
+        android:layout_toRightOf="@id/cancelQuit"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_weight="1"
-        android:text="OK" />
+        android:text="Exit" />
 
     </RelativeLayout>
 

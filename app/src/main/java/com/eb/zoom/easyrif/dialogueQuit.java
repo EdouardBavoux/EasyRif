@@ -19,47 +19,55 @@ package com.eb.zoom.easyrif;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.util.Log;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 /**
  * Created by Edouard on 29/07/2017.
  */
 
 
-public class dialogueNameTab extends DialogFragment{
+public class dialogueQuit extends DialogFragment{
 
-    protected TextView nameTab = null;
-    public onNameIsCommittedlistener nameCom;
+    public onQuitIsConfirmedlistener QuitCom;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        //Creation of the pop up dialog
-        Log.d("dialog", "we're inside !");
-        final View v = inflater.inflate(R.layout.boitedianame, container, false);
+        // Create the pop up dialog
+        final View v = inflater.inflate(R.layout.boitediaquit, container, false);
 
-        //Handle the Validation of the new tab, with edited name
-        Button validName = (Button) v.findViewById(R.id.validName);
-        nameTab = (EditText) v.findViewById(R.id.nameTab);
-        validName.setOnClickListener(new View.OnClickListener() {
+        //Handle the confirmation of the deletion
+        Button validQuit = (Button) v.findViewById(R.id.validQuit);
+        validQuit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Action to perform when validating the name of the tab
-                Log.d("dialog", "Name is: "+ nameTab.getText() );
-                nameCom.onNameIsCommitted((String) nameTab.getText().toString());
+                //Action to perform when validating the deletion of the tab
+                QuitCom.onQuitIsConfirmed();
+                Log.d("dialog", "Quit the edition");
                 dismiss();
             }
         });
+
+        //Handle the cancelation of the deletion
+        Button cancelQuit = (Button) v.findViewById(R.id.cancelQuit);
+        cancelQuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Action to perform when canceling the deletion of the tab
+                Log.d("dialog", "Stay on edition");
+                dismiss();
+            }
+        });
+
         return v ;
     }
 
-    //Definition of the function to be defined in the mainActivity, to react after the name is confirmed.
-    public interface onNameIsCommittedlistener{
-        public void onNameIsCommitted(String name);
+    //Definition of the function to be defined in the mainActivity, to react after deletion order is confirmed.
+    public interface onQuitIsConfirmedlistener{
+        public void onQuitIsConfirmed();
     }
 }
+

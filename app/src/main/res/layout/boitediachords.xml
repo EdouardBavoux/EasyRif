@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*Copyright 2017 Edouard Bavoux
+
+This file is part of EasyRif.
+
+    EasyRif is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EasyRif is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EasyRif.  If not, see <http://www.gnu.org/licenses/>.*/-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@color/superLightBlue">
+
+
+    <TextView
+        android:id="@+id/namehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:text="Chord creator" />
+
+    <RelativeLayout
+        android:id="@+id/selectMm"
+        style="@style/MyLightGreySections"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/namehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:id="@+id/choiceMm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:contentDescription="Maj"
+                android:text="Major" />
+
+            <RadioButton
+                android:id="@+id/minor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Min"
+                android:text="minor"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selecthight"
+        style="@style/MyLightGreySections"
+
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/selectMm"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/alter"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Flat ♭"
+                android:contentDescription="b"/>
+
+            <RadioButton
+                android:id="@+id/natural"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Natural"
+                android:contentDescription=""
+                android:layout_alignBaseline="@+id/radioButton3"
+                android:layout_alignBottom="@+id/radioButton3"
+                android:layout_toRightOf="@id/radioButton3" />
+
+            <RadioButton
+                android:id="@+id/sharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sharp ♯"
+                android:contentDescription="#"
+                android:layout_alignBaseline="@+id/radioButton4"
+                android:layout_alignBottom="@+id/radioButton4"
+                android:layout_toRightOf="@id/radioButton4" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        style="@style/MyLightGreySections"
+        android:padding="4dp"
+        android:id="@+id/selectFund"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/selecthight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="A"
+                    android:id="@+id/Akey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="B"
+                    android:id="@+id/Bkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="C"
+                    android:id="@+id/Ckey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="D"
+                    android:id="@+id/Dkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="E"
+                    android:id="@+id/Ekey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="F"
+                    android:id="@+id/Fkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <Button
+                    style="@style/MyButtons"
+                    android:text="G"
+                    android:id="@+id/Gkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/previewCont"
+        android:layout_below="@id/selectFund"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            style="@style/MySections"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titlePreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:text="Preview of the generated chord:" />
+
+            <TextView
+                android:id="@+id/chordPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titlePreview"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/writeChord"
+            style="@style/MyButtons"
+            android:background="@color/darkGreyBlue"
+            android:src ="@android:drawable/ic_input_add"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

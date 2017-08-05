@@ -1,0 +1,833 @@
+[
+   {
+      "@name": "A",
+      "chord": [
+         {
+            "@name": "AMaj",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "2",
+                  "@column": "4",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "AMin",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "A7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "4",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "AMaj7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "3",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "4",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "AMin7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "@name": "B",
+      "chord": [
+         {
+            "@name": "BMaj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "BMin",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "4",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "4"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "3",
+                     "@finger": "3"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "B7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "2",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "2",
+                  "@column": "5",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "BMaj7",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "2",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "0",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "3",
+                  "@column": "3",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "BMin7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "2",
+                  "@column": "5",
+                  "@finger": "4"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "@name": "C",
+      "chord": [
+         {
+            "@name": "CMaj",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "1",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "CMin",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "3",
+                  "@column": "1",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "C7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "1",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "3",
+                  "@column": "3",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "CMaj7",
+            "notPlayed": [ "0" ],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "1",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "CMin7",
+            "notPlayed": [
+               "0",
+               "1"
+            ],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "2",
+                  "@end": "4",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "5",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@name": "D",
+      "chord": [
+         {
+            "@name": "DMaj",
+            "notPlayed": [
+               "0",
+               "1"
+            ],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "5",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "4",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "DMin",
+            "notPlayed": [
+               "0",
+               "1"
+            ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "5",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "4",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "D7",
+            "notPlayed": [
+               "0",
+               "1"
+            ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "5",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "DMaj7",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "3",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "DMin7",
+            "notPlayed": [
+               "0",
+               "1"
+            ],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "4",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "2"
+               }
+            }
+         }
+      ]
+   },
+   {
+      "@name": "E",
+      "chord": [
+         {
+            "@name": "EMaj",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "3",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "EMin",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "E7",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "3",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               }
+            ]
+         },
+         {
+            "@name": "EMaj7",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "2",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "1",
+                  "@column": "3",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "EMin7",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "3",
+                  "@column": "4",
+                  "@finger": "4"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "@name": "F",
+      "chord": [
+         {
+            "@name": "FMaj",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "2",
+                     "@column": "3",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "1",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "FMin",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "1",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "F7",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "2",
+                     "@column": "3",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "1",
+                     "@finger": "3"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "FMaj7",
+            "notPlayed": [
+               "1",
+               "5"
+            ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "0",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "1",
+                  "@column": "4",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "2",
+                  "@column": "3",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "FMin7",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "1",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@name": "G",
+      "chord": [
+         {
+            "@name": "GMaj",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "0",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "3",
+                  "@column": "5",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "GMin",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "1",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "3",
+                  "@column": "0",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "4",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "3",
+                  "@column": "5",
+                  "@finger": "4"
+               }
+            ]
+         },
+         {
+            "@name": "G7",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "5",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "3",
+                  "@column": "0",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "GMaj7",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "5",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "3",
+                  "@column": "0",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "GMin7",
+            "notPlayed": [
+               "0",
+               "5"
+            ],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "1",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "3",
+                  "@column": "2",
+                  "@finger": "3"
+               },
+               {
+                  "@row": "3",
+                  "@column": "4",
+                  "@finger": "4"
+               }
+            ]
+         }
+      ]
+   }
+]

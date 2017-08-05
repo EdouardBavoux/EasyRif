@@ -15,4 +15,23 @@
         <item name="android:layout_margin">4dp</item>
     </style>
 
+    <style name="MySections">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@color/greyBlue</item>
+    </style>
+
+    <style name="MyLightGreySections">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@color/lightGreyBlue</item>
+    </style>
+
+    <style name="MyPreviousChords">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@color/White</item>
+        <item name="android:scaleX">0.80</item>
+        <item name="android:scaleY">0.80</item>
+    </style>
+
 </resources>

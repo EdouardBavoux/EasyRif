@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*Copyright 2017 Edouard Bavoux
+
+This file is part of EasyRif.
+
+    EasyRif is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EasyRif is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with EasyRif.  If not, see <http://www.gnu.org/licenses/>.*/-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@color/lightGreyBlue">
+
+
+    <TextView
+        android:id="@+id/namehintSize"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Please confirm your export options :" />
+
+
+<RadioGroup
+    android:layout_below="@id/namehintSize"
+    android:id="@+id/optionSizeContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RadioButton
+        android:text="20 characters by line (for Whatsapp)"
+        android:id="@+id/width20"
+        android:contentDescription="20"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioButton
+        android:text="60 characters by line (for PDF file)"
+        android:id="@+id/width60"
+        android:contentDescription="60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioButton
+        android:text="Personalized :"
+        android:contentDescription="other"
+        android:id="@+id/widthOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RadioGroup>
+
+    <EditText
+        android:visibility="gone"
+        android:layout_below="@id/optionSizeContainer"
+        android:id="@+id/fieldSize"
+        android:layout_marginLeft="40dp"
+        android:hint="Number of characters by line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        style="@style/MyButtons"
+        android:id="@+id/validFormExport"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fieldSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="OK" />
+
+</RelativeLayout>

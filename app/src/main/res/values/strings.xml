@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">EasyRif</string>
+    <string name="chord_A_1">-02220</string>
+    <string name="chord_A_2">577655</string>
+    <string name="chord_Am_1">-02210</string>
+    <string name="chord_Am_2">577555</string>
+    <string name="chord_E_1">022100</string>
+    <string name="chord_E_2">-79997</string>
+    <string name="chord_Em_1">022000</string>
+    <string name="chord_Em_2">-79987</string>
 </resources>
