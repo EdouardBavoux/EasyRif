@@ -62,7 +62,13 @@ public class MyCustomAdapter extends BaseAdapter implements ListAdapter {
         //Handle TextView and display string from your list
         TextView listItemText = (TextView)view.findViewById(R.id.list_item_string);
         final RelativeLayout listid = (RelativeLayout) view.findViewById(R.id.listid);
-        listItemText.setText(list.get(position));
+        String name;
+        if (list.get(position).toString().matches("TabEasyRif.*"))
+        {
+            name = list.get(position).toString().substring(11,list.get(position).toString().length());
+        }
+        else {name=list.get(position).toString();}
+        listItemText.setText(name);
 
         listid.setOnClickListener(new View.OnClickListener() {
             @Override

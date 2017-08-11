@@ -48,9 +48,7 @@ public class BrowsingActivity extends Activity {
 
         //Display the list of tabs that have been stored / saved previously
         tabL=(ListView) findViewById(R.id.tablist);
-        String[] listOfFiles = fileList();
-        if (listOfFiles.length==0)
-        {listOfFiles=new String[]{"A Magnificent Tab Example"};}
+        List<String> listOfFiles = getTabList();
         myTabs = new ArrayList(Arrays.asList(listOfFiles));
         Log.d("BrowsingTabs","My files: "+ myTabs.toString());
         tabAdapter = new MyCustomAdapter(myTabs,this);
@@ -132,10 +130,10 @@ public class BrowsingActivity extends Activity {
     //Definition of the function used to refresh the list whenever an item has been deleted or added.
     protected void refreshTabList() {
         //
-        String[] listOfFiles = fileList();
-        if (listOfFiles.length==0)
-        {listOfFiles=new String[]{"A Magnificent Tab Example"};}
-        myTabs = new ArrayList(Arrays.asList(listOfFiles));
+//Display the list of tabs that have been stored / saved previously
+        tabL=(ListView) findViewById(R.id.tablist);
+        List<String> listOfFiles = getTabList();
+        myTabs = new ArrayList(Arrays.asList(listOfFiles.toArray()));
         tabAdapter=new MyCustomAdapter(myTabs,this);
         tabAdapter=new MyCustomAdapter(myTabs,this);
         tabL.setAdapter(tabAdapter);
@@ -147,6 +145,27 @@ public class BrowsingActivity extends Activity {
         super.onResume();
         refreshTabList();
 
+    }
+
+    protected List<String> getTabList(){
+        Log.d("BrowsingTabs","Entering method getTabList");
+        String[] tlistOfFiles = fileList();
+        List<String> listOfFiles =new ArrayList<>();
+        {
+            for (String fileName:tlistOfFiles)
+            {
+                if (fileName.matches("TabEasyRif.*"))
+                {
+                    listOfFiles.add(fileName);
+                }
+            }
+            if (listOfFiles.size()==0)
+            {
+                listOfFiles=new ArrayList<>();
+                listOfFiles.add("A Magnificent Tab Example");
+            }
+        }
+        return listOfFiles;
     }
 
  /*   @Override

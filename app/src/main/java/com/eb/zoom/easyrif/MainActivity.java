@@ -762,10 +762,12 @@ public class MainActivity extends Activity implements dialogueNameTab.onNameIsCo
 
                 AskName.nameCom = new dialogueNameTab.onNameIsCommittedlistener() {
                     @Override
-                    public void onNameIsCommitted(String name) {
+                    public void onNameIsCommitted(String iName) {
                         //Action to perfor when the name of the tab to be saved has been validated.
-                        Log.d("Zoomeb","This time the name is known in my main activity !!! "+ name);
+                        Log.d("Zoomeb","This time the name is known in my main activity !!! "+ iName);
 
+                        String name = "TabEasyRif."+iName;
+                        tabNameString = name;
                         // Create JSON object
                         try {
                             Json = new JSONObject();

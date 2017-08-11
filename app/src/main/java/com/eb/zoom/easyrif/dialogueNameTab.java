@@ -28,6 +28,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static android.R.id.list;
+
 /**
  * Created by Edouard on 29/07/2017.
  */
@@ -44,12 +46,27 @@ public class dialogueNameTab extends DialogFragment{
         Log.d("dialog", "we're inside !");
         final View v = inflater.inflate(R.layout.boitedianame, container, false);
 
+        // Transform the suggested name
+        MainActivity MyAct = (MainActivity) this.getActivity();
+        String suggestedName;
+        if (MyAct.tabNameString.matches("TabEasyRif.*"))
+        {
+            suggestedName = MyAct.tabNameString.substring(11,MyAct.tabNameString.length());
+        }
+        else
+        {
+            if (MyAct.tabNameString.equals("A Magnificent Tab Example"))
+            {
+                suggestedName="";
+            }
+            else {suggestedName=MyAct.tabNameString;}
+        }
+
         //Handle the Validation of the new tab, with edited name
         final Button validName = (Button) v.findViewById(R.id.validName);
         nameTab = (EditText) v.findViewById(R.id.nameTab);
-        MainActivity MyAct = (MainActivity) this.getActivity();
-        nameTab.setText(MyAct.tabNameString);
-        nameTab.setHint(MyAct.tabNameString);
+        nameTab.setText(suggestedName);
+        nameTab.setHint(suggestedName);
 
         //If the name committed does not correspond to a previous one, check if it already exist.
         //String[] listOfFiles = MyAct.fileList();
