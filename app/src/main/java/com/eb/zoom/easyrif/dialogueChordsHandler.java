@@ -96,7 +96,6 @@ public class dialogueChordsHandler extends DialogFragment {
                     LinearLayout prevCont=(LinearLayout)v.findViewById(R.id.previewCont);
                     prevCont.setVisibility(View.VISIBLE);
                     objChord = findChord(selectedChord);
-                    objChord.setKey(b.getText().toString()+sel1.getContentDescription().toString());
                     if (objChord!=null) {
                         prev.setText(objChord.getName() + " : " + objChord.getContentAsString());
                     }
@@ -108,6 +107,7 @@ public class dialogueChordsHandler extends DialogFragment {
         }
 
         //Reset the preview when changing the radio boxes afterwards:
+        //First for Major/Minor
         radioMm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -117,9 +117,38 @@ public class dialogueChordsHandler extends DialogFragment {
                 }
                 else
                 {
+                    RadioGroup radioAlt = (RadioGroup) v.findViewById(R.id.alter);
+                    RadioButton sel1 = (RadioButton) v.findViewById(radioAlt.getCheckedRadioButtonId());
                     RadioGroup radioMm = (RadioGroup) v.findViewById(R.id.choiceMm);
                     RadioButton sel2 = (RadioButton) v.findViewById(radioMm.getCheckedRadioButtonId());
-                    selectedChord = objChord.getKey()+sel2.getContentDescription();
+                    selectedChord = objChord.getKey()+sel1.getContentDescription()+sel2.getContentDescription();
+                    objChord=findChord(selectedChord);
+                    if (objChord!=null) {
+                        prev.setText(objChord.getName() + " : " + objChord.getContentAsString());
+                    }
+                    else {
+                        prev.setText("Chord is not in the database, sorry...");
+                    }
+                }
+            }
+        });
+
+        //Then for flat / sharp
+        radioAlt.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
+                if (objChord==null)
+                {
+                    //No Key has been selected, no display has been performed so far
+                }
+                else
+                {
+                    RadioGroup radioAlt = (RadioGroup) v.findViewById(R.id.alter);
+                    RadioButton sel1 = (RadioButton) v.findViewById(radioAlt.getCheckedRadioButtonId());
+                    RadioGroup radioMm = (RadioGroup) v.findViewById(R.id.choiceMm);
+                    RadioButton sel2 = (RadioButton) v.findViewById(radioMm.getCheckedRadioButtonId());
+                    Log.d("ChordHandler", "key"+objChord.getKey().toString()+ "sel 1"+sel1.getContentDescription()+"Sel2"+sel2.getContentDescription());
+                    selectedChord = objChord.getKey()+sel1.getContentDescription()+sel2.getContentDescription();
                     objChord=findChord(selectedChord);
                     if (objChord!=null) {
                         prev.setText(objChord.getName() + " : " + objChord.getContentAsString());
@@ -150,7 +179,7 @@ public class dialogueChordsHandler extends DialogFragment {
     private Chord findChord(String selectedChord) {
         //Here we should generate the requested chord tab.
         try {
-            Log.d("ChordHandler","We enter the try");
+            Log.d("ChordHandler","We enter the try, and we search for this chord : "+ selectedChord);
             InputStream ins = getResources().openRawResource(R.raw.dbchords);
             Log.d("ChordHandler","File is being opened");
             int value2;
@@ -163,12 +192,15 @@ public class dialogueChordsHandler extends DialogFragment {
             }
             JSONArray iJson= new JSONArray(lu2.toString());
             boolean chordFoundInDB = false;
+            //Beginning of the search in DB : 7 possible keys
             for (int i=0 ; i<7 ; i++)
             {
-                JSONArray chordsinAArray = iJson.getJSONObject(i).getJSONArray("chord");
-                for (int j=0 ; j<2 ; j++)
+                JSONArray chordsiniArray = iJson.getJSONObject(i).getJSONArray("chord");
+                //Inside key i (example B) we search the two first Chords (Major / minor)
+                //Instead, I should search every one, and check the # and b as well
+                for (int j=0 ; j<chordsiniArray.length() ; j++)
                 {
-                    JSONObject specificChord = chordsinAArray.getJSONObject(j);
+                    JSONObject specificChord = chordsiniArray.getJSONObject(j);
                     String ChordNameij = specificChord.getString("@name");
                     if (ChordNameij.equals(selectedChord))
                     {
@@ -179,7 +211,8 @@ public class dialogueChordsHandler extends DialogFragment {
                         objChord = new Chord();
                         objChord.setcontent(new String[]{tChord[0], tChord[1], tChord[2], tChord[3], tChord[4], tChord[5]});
                         objChord.setName(ChordNameij);
-                        Log.d("ChordHandler","objChord has been correctly populated in findChord function"+objChord.getContentAsString());
+                        objChord.setKey(selectedChord.substring(0,1));
+                        Log.d("ChordHandler","objChord has been correctly populated in findChord function"+objChord.getContentAsString() + "Key is: "+ objChord.getKey());
                     }
                 }
             }

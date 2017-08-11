@@ -11,4 +11,7 @@
     <color name="darkerGreyBlue">#064687</color>
     <color name="grey">#4c5763</color>
     <color name="White">#FFFFFF</color>
+    <color name="Orange">#fcb155</color>
+    <color name="Transparent">#00dce8f4</color>
+    <color name="BlueTransparent">#44e1e4e8</color>
 </resources>

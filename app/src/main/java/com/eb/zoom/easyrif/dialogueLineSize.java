@@ -18,11 +18,14 @@ This file is part of EasyRif.
 package com.eb.zoom.easyrif;
 
 import android.app.DialogFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -56,9 +59,10 @@ public class dialogueLineSize extends DialogFragment{
             public void onClick(View view) {
                 lineEdit = (EditText) v.findViewById(R.id.fieldSize);
                 lineEdit.setVisibility(View.VISIBLE);
+                lineEdit.requestFocus();
             }
         });
-        Button confLineSize = (Button) v.findViewById(R.id.validFormExport);
+        final Button confLineSize = (Button) v.findViewById(R.id.validFormExport);
         LineSize = (RadioGroup) v.findViewById(R.id.optionSizeContainer);
 
         confLineSize.setOnClickListener(new View.OnClickListener() {
@@ -73,14 +77,24 @@ public class dialogueLineSize extends DialogFragment{
                     //Fetch the value in EditText field
                     try {
                         lineSizeInt = Integer. parseInt(lineEdit.getText().toString());
-                        Log.d("dialog", "Line size after catch is: "+ lineSizeInt );
-                        LineSizeCom.onLineSizeIsCommitted(lineSizeInt);
-                        dismiss();
+                        if (lineSizeInt<1001 && lineSizeInt>4)
+                        {
+                            Log.d("dialog", "Line size after catch is: "+ lineSizeInt );
+                            LineSizeCom.onLineSizeIsCommitted(lineSizeInt);
+                            dismiss();
+                        }
+                        else {
+
+                            Log.d("dialog", "The input is not in the range !!");
+                            lineEdit.setHint("Only numbers between 5 and 1000 are accepted.");
+                            lineEdit.setText("");
+                            lineEdit.setHintTextColor(getResources().getColor(R.color.colorAccent));
+                        }
 
                     }  catch (NumberFormatException e)
                     {
                         Log.d("dialog", "The input is not a number !!");
-                        lineEdit.setHint("Only numbers are accepted.");
+                        lineEdit.setHint("Only numbers between 10 and 1000 are accepted.");
                         lineEdit.setText("");
                         lineEdit.setHintTextColor(getResources().getColor(R.color.colorAccent));
                     }
@@ -95,6 +109,22 @@ public class dialogueLineSize extends DialogFragment{
                 }
             }
         });
+
+        //Handle the key enter
+        final EditText edittext = (EditText) v.findViewById(R.id.fieldSize);
+        edittext.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    // Perform action on key press
+                    confLineSize.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
+
         return v ;
     }
 

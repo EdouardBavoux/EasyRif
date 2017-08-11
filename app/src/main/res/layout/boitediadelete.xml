@@ -47,7 +47,6 @@ This file is part of EasyRif.
         style="@style/MyButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/namehint"
         android:layout_margin="8dp"
         android:layout_weight="1"
         android:text="Cancel" />

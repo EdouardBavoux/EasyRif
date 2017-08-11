@@ -96,7 +96,119 @@
                   "@finger": "2"
                }
             ]
+         },
+         {
+            "@name": "A#Maj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "4",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "4"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "A#Min",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "2",
+                     "@column": "4",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "4"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "AbMin",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "4"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "3",
+                     "@finger": "3"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "AbMaj",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "5",
+                     "@column": "4",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "4"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "3",
+                     "@finger": "3"
+                  }
+               ]
+            }
          }
+
       ]
    },
    {
@@ -232,6 +344,122 @@
                   "@finger": "4"
                }
             ]
+         },
+         {
+            "@name": "B#Maj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "3",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "5",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "B#Min",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "3",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "5",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "BbMaj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "BbMin",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "2",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
          }
       ]
    },
@@ -344,6 +572,122 @@
                   {
                      "@row": "3",
                      "@column": "5",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "CbMaj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "CbMin",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "C#Maj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "C#Min",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "4",
                      "@finger": "4"
                   }
                ]
@@ -469,6 +813,122 @@
                   "@finger": "2"
                }
             }
+         },
+         {
+            "@name": "D#Maj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "6",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "8",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "8",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "8",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "D#Min",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "6",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "8",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "8",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "7",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "DbMaj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "DbMin",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
          }
       ]
    },
@@ -569,6 +1029,122 @@
                   "@finger": "4"
                }
             ]
+         },
+         {
+            "@name": "E#Maj",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "1",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "2",
+                     "@column": "3",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "E#Min",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "3",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "1",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "EbMaj",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "6",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "8",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "8",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "8",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "EbMin",
+            "notPlayed": [ "0" ],
+            "fingers": {
+               "barre": {
+                  "@row": "6",
+                  "@start": "1",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "8",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "8",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "7",
+                     "@column": "4",
+                     "@finger": "4"
+                  }
+               ]
+            }
          }
       ]
    },
@@ -709,6 +1285,96 @@
                   }
                ]
             }
+         },
+         {
+            "@name": "FbMaj",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "1",
+                  "@column": "3",
+                  "@finger": "1"
+               },
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "FbMin",
+            "notPlayed": [],
+            "fingers": [
+               {
+                  "@row": "2",
+                  "@column": "1",
+                  "@finger": "2"
+               },
+               {
+                  "@row": "2",
+                  "@column": "2",
+                  "@finger": "3"
+               }
+            ]
+         },
+         {
+            "@name": "F#Maj",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "F#Min",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "1",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
          }
       ]
    },
@@ -827,6 +1493,112 @@
                   "@finger": "4"
                }
             ]
+         },
+         {
+            "@name": "GbMaj",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "3",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "GbMin",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "2",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "4",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "4",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "G#Maj",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "5",
+                     "@column": "3",
+                     "@finger": "3"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
+         },
+         {
+            "@name": "F#Min",
+            "notPlayed": [],
+            "fingers": {
+               "barre": {
+                  "@row": "4",
+                  "@start": "0",
+                  "@end": "5",
+                  "@finger": "1"
+               },
+               "finger": [
+                  {
+                     "@row": "6",
+                     "@column": "2",
+                     "@finger": "2"
+                  },
+                  {
+                     "@row": "6",
+                     "@column": "1",
+                     "@finger": "4"
+                  }
+               ]
+            }
          }
       ]
    }

@@ -26,17 +26,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.util.Collections.addAll;
+
 public class BrowsingActivity extends Activity {
 
     public ListView tabL;
     public Button newTab;
-    public ArrayAdapter<String> tabAdapter;
-    public List myTabs ;
+    public MyCustomAdapter tabAdapter;
+    public ArrayList myTabs ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +48,12 @@ public class BrowsingActivity extends Activity {
 
         //Display the list of tabs that have been stored / saved previously
         tabL=(ListView) findViewById(R.id.tablist);
-        myTabs = new ArrayList(Arrays.asList(fileList()));
+        String[] listOfFiles = fileList();
+        if (listOfFiles.length==0)
+        {listOfFiles=new String[]{"A Magnificent Tab Example"};}
+        myTabs = new ArrayList(Arrays.asList(listOfFiles));
         Log.d("BrowsingTabs","My files: "+ myTabs.toString());
-        tabAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,myTabs);
+        tabAdapter = new MyCustomAdapter(myTabs,this);
         tabL.setAdapter(tabAdapter);
 
         // Handle the creation of a new tab if the user select new tab
@@ -68,9 +74,19 @@ public class BrowsingActivity extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //adapterView l'AdapterView qui contient la vue sur laquelle le clic a été effectué, view qui est la vue en elle-même, position qui est la position de la vue dans la liste et enfin id qui est l'identifiant de la vue.
                 //Launch mainActivity with loaded tab
-                Intent i2 = new Intent(getApplicationContext(),MainActivity.class);
-                i2.putExtra("tabNameInt", adapterView.getItemAtPosition(i).toString());
-                startActivity(i2);
+                if (l==1)
+                {
+                    Log.d("BrowsingTabs","Item has been clicked");
+                    Intent i2 = new Intent(getApplicationContext(),MainActivity.class);
+                    i2.putExtra("tabNameInt", adapterView.getItemAtPosition(i).toString());
+                    startActivity(i2);
+                }
+                else
+                {
+                    Log.d("BrowsingTabs","To be deleted: "+ adapterView.getItemAtPosition(i).toString());
+                    deleteTab(adapterView,i);
+                }
+
             }
         });
 
@@ -80,30 +96,57 @@ public class BrowsingActivity extends Activity {
             public boolean onItemLongClick(final AdapterView<?> adapterView, View view, final int i, long l) {
                 //adapterView l'AdapterView qui contient la vue sur laquelle le clic a été effectué, view qui est la vue en elle-même, position qui est la position de la vue dans la liste et enfin id qui est l'identifiant de la vue.
                 Log.d("BrowsingTabs","To be deleted: "+ adapterView.getItemAtPosition(i).toString());
-                dialogueDelete AskDelete = new dialogueDelete();
-                AskDelete.show(getFragmentManager(),"Dialog");
-                AskDelete.deletionCom = new dialogueDelete.onDeletionIsConfirmedlistener() {
-                    @Override
-                    public void onDeletionIsConfirmed() {
-                        //We are back here is the deletion has been confimed by the user
-                        boolean deleted = deleteFile(adapterView.getItemAtPosition(i).toString());
-                        refreshTabList();
-                        Log.d("BrowsingTabs","Deletion has been confirmed and executed");
-                    }
-                };
-
+                deleteTab(adapterView,i);
             return true;
             }
         });
+    }
+    //Definition of the deletion process
+    protected void deleteTab(final AdapterView adapterView,final int i){
+
+        Log.d("BrowsingTabs","Entering the deleteTab method for : "+adapterView.getItemAtPosition(i).toString().equals("A Magnificent Tab Example"));
+        if (adapterView.getItemAtPosition(i).toString().equals("A Magnificent Tab Example"))
+        {
+            //The user tries to delete the tab example
+            Log.d("BrowsingTabs", "The user tries to delete the tab example");
+            Toast.makeText(this, "Create your own tabs, and this example will be hidden automatically",
+                    Toast.LENGTH_LONG).show();
+        }
+        else {
+            dialogueDelete AskDelete = new dialogueDelete();
+            AskDelete.show(getFragmentManager(), "Dialog");
+            AskDelete.deletionCom = new dialogueDelete.onDeletionIsConfirmedlistener() {
+                @Override
+                public void onDeletionIsConfirmed() {
+
+                    Log.d("BrowsingTabs", "Deletion order has been confirmed :execution");
+                    //We are back here is the deletion has been confimed by the user
+                    boolean deleted = deleteFile(adapterView.getItemAtPosition(i).toString());
+                    refreshTabList();
+                    Log.d("BrowsingTabs", "Deletion has been confirmed and executed");
+                }
+            };
+        }
     }
 
     //Definition of the function used to refresh the list whenever an item has been deleted or added.
     protected void refreshTabList() {
         //
-        myTabs = new ArrayList(Arrays.asList(fileList()));
-        tabAdapter.clear();
-        tabAdapter.addAll(myTabs);
-        tabAdapter.notifyDataSetChanged();
+        String[] listOfFiles = fileList();
+        if (listOfFiles.length==0)
+        {listOfFiles=new String[]{"A Magnificent Tab Example"};}
+        myTabs = new ArrayList(Arrays.asList(listOfFiles));
+        tabAdapter=new MyCustomAdapter(myTabs,this);
+        tabAdapter=new MyCustomAdapter(myTabs,this);
+        tabL.setAdapter(tabAdapter);
+
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        refreshTabList();
+
     }
 
  /*   @Override

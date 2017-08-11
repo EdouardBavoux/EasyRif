@@ -31,7 +31,7 @@ This file is part of EasyRif.
         android:layout_centerHorizontal="true"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        android:text="Chord creator" />
+        android:text="Chord creator :" />
 
     <RelativeLayout
         android:id="@+id/selectMm"
@@ -77,6 +77,7 @@ This file is part of EasyRif.
 
         <RadioGroup
             android:id="@+id/alter"
+            android:visibility="visible"
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">

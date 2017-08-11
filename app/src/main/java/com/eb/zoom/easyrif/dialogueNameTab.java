@@ -19,6 +19,7 @@ package com.eb.zoom.easyrif;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,8 +45,18 @@ public class dialogueNameTab extends DialogFragment{
         final View v = inflater.inflate(R.layout.boitedianame, container, false);
 
         //Handle the Validation of the new tab, with edited name
-        Button validName = (Button) v.findViewById(R.id.validName);
+        final Button validName = (Button) v.findViewById(R.id.validName);
         nameTab = (EditText) v.findViewById(R.id.nameTab);
+        MainActivity MyAct = (MainActivity) this.getActivity();
+        nameTab.setText(MyAct.tabNameString);
+        nameTab.setHint(MyAct.tabNameString);
+
+        //If the name committed does not correspond to a previous one, check if it already exist.
+        //String[] listOfFiles = MyAct.fileList();
+
+
+        Log.d("dialog", "Name of the tab , before, was :"+ MyAct.tabNameString);
+
         validName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +66,23 @@ public class dialogueNameTab extends DialogFragment{
                 dismiss();
             }
         });
+
+        //Handle the key enter
+        final EditText edittext = (EditText) v.findViewById(R.id.nameTab);
+        edittext.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    // Perform action on key press
+                    validName.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
         return v ;
     }
 
